@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1565035921092" clover="3.2.0">
+  <project timestamp="1565035921092" name="All files">
+    <metrics statements="24" coveredstatements="17" conditionals="1" coveredconditionals="0" methods="24" coveredmethods="3" elements="49" coveredelements="20" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+    <file name="board.js" path="C:\Users\AOliveras\src\tic-tac-toe-test\lib\board.js">
+      <metrics statements="12" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="35" count="1" type="cond" truecount="0" falsecount="1"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="48" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="50" count="0" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+    </file>
+    <file name="utils.js" path="C:\Users\AOliveras\src\tic-tac-toe-test\lib\utils.js">
+      <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="1"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="78" count="1" type="stmt"/>
+      <line num="86" count="12" type="stmt"/>
+      <line num="88" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
