@@ -21,13 +21,42 @@ describe('displayTurn', () => {
 });
 
 describe('displayWin', () => {
-  it.todo('should print the current board and the congradulate player prompt');
+  it('should print the current board and the congradulate player prompt', () => {
+    console.log = jest.fn();
+
+    const inputBoard = [['X', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    const playerInput = 'X';
+    displayWin(inputBoard, playerInput);
+
+    expect(console.log).toBeCalledTimes(2);
+    expect(console.log).toBeCalledWith(`Congratulations! ${playerInput} wins`);
+
+    console.log.mockClear();
+  });
 });
 
-describe('displayWTie', () => {
-  it.todo('should print the current board and the congradulate player prompt');
+describe('displayTie', () => {
+  it('should print the current board and the tie game prompt', () => {
+    console.log = jest.fn();
+
+    const inputBoard = [['X', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    displayTie(inputBoard);
+
+    expect(console.log).toBeCalledTimes(2);
+    expect(console.log).toBeCalledWith(`It's a tie! No one wins`);
+
+    console.log.mockClear();
+  });
 });
 
 describe('displayError', () => {
-  it.todo('should print the current board and the congradulate player prompt');
+  it('should print the message belonging to the error passed in as the argument', () => {
+    console.error = jest.fn();
+    const error = new Error();
+    displayError(error);
+
+    expect(console.error).toBeCalledTimes(1);
+
+    console.error.mockClear();
+  });
 });

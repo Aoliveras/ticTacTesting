@@ -45,14 +45,23 @@ describe('getValidMoveFromPlayer', () => {
 
     expect(result).toEqual([1, 1]);
   });
-  it.todo('should prompt the user for input in the form of "row col"');
-  it('should display an error if there is invalid input', () => {
+  it('should prompt the user for input in the form of "row col"', () => {
+    readlineSync.question = jest.fn();
+    const board = [['X', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    readlineSync.question.mockReturnValueOnce('1 1');
+
+    getValidMoveFromPlayer(board);
+
+    expect(readlineSync.question).toBeCalledTimes(1);
+  });
+  xit('should display an error if there is invalid input', () => {
     displayError = jest.fn();
     const board = [['X', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
     readlineSync.question.mockReturnValueOnce('1');
     readlineSync.question.mockReturnValueOnce('1 1');
     getValidMoveFromPlayer(board);
+    expect(displayError).toHaveBeenCalled();
 
-    expect(displayError).toBeCalledTimes(1);
+    displayError.mockClear();
   });
 });
